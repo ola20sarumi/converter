@@ -1,0 +1,14 @@
+header{
+    background-color: coral;
+    padding: 15px
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 15px;
+}
+
+a:hover{
+    background-color: chocolate;
+}
