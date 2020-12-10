@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ConverterComponent } from './converter/converter.component';
 import { AboutComponent } from './about/about.component';
 import {FormsModule} from '@angular/forms'
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {FormsModule} from '@angular/forms'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

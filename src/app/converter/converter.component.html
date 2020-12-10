@@ -1,14 +1,21 @@
-<div class="container">
+<div class="container"  *ngIf="rates">
     <h1>Converter</h1>
 
 <input type="number" placeholder="amount" [(ngModel)]=amount>
 
-<label>From: {{from}}</label> 
-<label>To: {{to}}</label> 
+<label>From: </label> 
+<select [(ngModel)]="from">
+<option *ngFor="let c of getAllCurrencies()" [value]="c">{{c}}</option>
+</select>
 
+
+<label>To: {{to}}</label> 
+<select [(ngModel)]="to">
+    <option *ngFor="let c of getAllCurrencies()" [value]="c">{{c}}</option>
+    </select>
 
 <br>
 
-<b>{{amount.toFixed(2)}} {{from}} = {{convert()}} {{to}}</b>
+<b> {{amount.toFixed(2)}} {{from}} = {{convert().toFixed(2)}} {{to}}</b>
 
 </div>
